@@ -1,0 +1,29 @@
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    vmImage: ubuntu-latest
+  steps:
+  - checkout: self
+    fetchDepth: 1
+  - task: Npm@1
+    displayName: npm install
+    inputs:
+      verbose: false
+  - task: Npm@1
+    displayName: npm build
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: run build
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+    inputs:
+      PathtoPublish: build
+  - task: AzureRmWebAppDeployment@4
+    displayName: 'Azure App Service Deploy: YoutubeByUday'
+    inputs:
+      ConnectedServiceName: 96fd0fed-fa17-414d-b0b6-5806ca2a04a1
+      WebAppName: YoutubeByUday
+      Package: $(System.DefaultWorkingDirectory)/build
+...
