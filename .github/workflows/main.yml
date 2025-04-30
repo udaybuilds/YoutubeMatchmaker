@@ -1,0 +1,17 @@
+name: Building YoutubeMatchmaker
+
+on: push
+
+jobs:
+  my-job:
+    name: Checkout Source
+    runs-on: ubuntu-latest
+    steps:
+      - name: git Checkout
+        # env:
+        #   MY_VAR: Hi there! My name is
+        #   FIRST_NAME: Mona
+        #   MIDDLE_NAME: The
+        #   LAST_NAME: Octocat
+        run: |
+          git checkout master
