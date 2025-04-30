@@ -7,11 +7,9 @@ jobs:
     name: Checkout Source
     runs-on: ubuntu-latest
     steps:
-      - name: git Checkout
-        # env:
-        #   MY_VAR: Hi there! My name is
-        #   FIRST_NAME: Mona
-        #   MIDDLE_NAME: The
-        #   LAST_NAME: Octocat
-      - run : git init
-      - run : git clone https://github.com/udaybuilds/YoutubeMatchmaker.git
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Clone YoutubeMatchmaker repository
+        run: |
+          git clone https://github.com/udaybuilds/YoutubeMatchmaker.git
