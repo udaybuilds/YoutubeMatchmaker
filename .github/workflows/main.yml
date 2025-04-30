@@ -13,3 +13,6 @@ jobs:
       - name: Clone YoutubeMatchmaker repository
         run: |
           git clone https://github.com/udaybuilds/YoutubeMatchmaker.git
+      - name: Building Docker Image
+        run: |
+          docker build
