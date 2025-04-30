@@ -13,6 +13,5 @@ jobs:
         #   FIRST_NAME: Mona
         #   MIDDLE_NAME: The
         #   LAST_NAME: Octocat
-        run:
-          git init
-          git clone https://github.com/udaybuilds/YoutubeMatchmaker.git
+      - run : git init
+      - run : git clone https://github.com/udaybuilds/YoutubeMatchmaker.git
