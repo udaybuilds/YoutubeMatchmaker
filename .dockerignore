@@ -1,0 +1,8 @@
+build
+node_modules
+public
+src
+.env
+.env.examples
+azure-pipelines.yml
+.gitignore
