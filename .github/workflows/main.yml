@@ -15,4 +15,4 @@ jobs:
           git clone https://github.com/udaybuilds/YoutubeMatchmaker.git
       - name: Building Docker Image
         run: |
-          docker build -t YoutubeMatch .
+          docker build -t youtubematch .
