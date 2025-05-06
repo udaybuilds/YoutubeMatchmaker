@@ -16,6 +16,3 @@ jobs:
       - name: Building Docker Image
         run: |
           docker build -t youtubematch .
-      -name: Tagging and pushing image
-        run: |
-          
