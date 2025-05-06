@@ -3,7 +3,7 @@ name: Building YoutubeMatchmaker
 on: push
 
 jobs:
-  my-job:
+  checkout-source:
     name: Checkout Source
     runs-on: ubuntu-latest
     steps:
@@ -14,8 +14,9 @@ jobs:
         run: |
           git clone https://github.com/udaybuilds/YoutubeMatchmaker.git
 
-  my-job:
+  create-docker-image:
     name: Creating Docker Image
+    runs-on: ubuntu-latest
     steps:
       - name: Authenticating GitHub
         run: |
