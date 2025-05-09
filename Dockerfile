@@ -8,12 +8,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     gcc \
     g++ \
+    python3-dev \
     libffi-dev \
     libssl-dev \
     libpq-dev \
     git \
     curl \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # Copy code
 COPY ./authentication_module ./authentication_module
