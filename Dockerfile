@@ -23,8 +23,8 @@ WORKDIR /app/authentication_module
 
 # Copy and install Python dependencies
 COPY ./authentication_module/requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip \
- && pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Set Flask environment variables
 ENV FLASK_APP=authentication.py
