@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && pip install --no-cache-dir -r requirements.txt
 
 # Set environment
-ENV FLASK_APP=app.py
+ENV FLASK_APP=authentication.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 EXPOSE 5000
